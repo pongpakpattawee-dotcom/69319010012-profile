@@ -6,8 +6,8 @@ echo '<div class="message-box">
 </div>';
 
 echo '<div class="message-box">
-    <strong>[CONNECTION_PENDING]:</strong> ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 2...
+    <strong>[Praveen]:</strong> Hello Pongpak i'm Praveen
     <br>
-    <span style="font-size: 12px; color: #666;">-> STATUS: WAITING_FOR_COMMIT</span>
+    <span style="font-size: 12px; color: #666;">-> STATUS: Praveen69319010009</span>
 </div>';
 ?>
