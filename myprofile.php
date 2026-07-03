@@ -161,7 +161,7 @@
         </p>
         <hr style="border: 0; border-top: 1px dashed var(--secondary-color); margin: 20px 0;">
         
-<div class="messages-container">
+        <div class="messages-container">
         <?php
         if(file_exists('messages.php')){
             include('messages.php');
