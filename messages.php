@@ -1,7 +1,7 @@
 <div class="message-box">
-    <strong>[netiwit]:</strong> รอการเชื่อมต่อระบบและฝากข้อความจากสมาชิกคนที่ 1...
+    <strong>[netiwit]:</strong> Hello Pongpak i'm netiwit 
     <br>
-    <span style="font-size: 12px; color: #666;">— STATUS: WAITING_FOR_COMMIT</span>
+    <span style="font-size: 12px; color: #666;">— STATUS: netiwit69319010010</span>
 </div>
 
 <div class="message-box">
