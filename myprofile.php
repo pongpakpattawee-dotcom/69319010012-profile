@@ -161,14 +161,13 @@
         </p>
         <hr style="border: 0; border-top: 1px dashed var(--secondary-color); margin: 20px 0;">
         
-        <div class="messages-container">
-        <?php
-        if(file_exists('messages.php')){
-            include('messages.php');
-        }else{
-            echo "<p style='color:#555;'>[ SYSTEM ] ยังตรวจไม่พบฐานข้อมูลข้อความจากผู้ใช้งานภายนอก...</p>";
-        }
-        ?>
+	<div class="messages-container">
+	<?php if (file_exists('messages.php')): ?>
+    	<?php include('messages.php'); ?>
+	<?php else: ?>
+    	<p style="color: #555;">[ SYSTEM ] ยังตรวจไม่พบฐานข้อมูลข้อความจากผู้ใช้งานภายนอก...</p>
+	<?php endif; ?>
+	</div>
         </div>
     </div>
 </div>
