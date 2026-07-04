@@ -157,10 +157,10 @@
     </div>
 
     <div class="guestbook-section">
-        <h2>💬 INCOMING_MESSAGES</h2>
+        <h2>💬 INCOMING_MESSAGES (ข้อความจากเครือข่ายเพื่อนร่วมทีม)</h2>
         
         <p style="color: #ffb86c; font-size: 13px; font-weight: bold;">
-            [ SYSTEM STATUS: ดึงข้อมูลจากข้อความของสมาชิกในทีมสำเร็จ ]
+            [ WARNING: สมาชิกในทีมอีก 2 คน ต้องทำการแก้ไขไฟล์ messages.php เพื่อแทรกข้อความของตนเองเข้าสู่ระบบ ]
         </p>
         
         <hr style="border: 0; border-top: 1px dashed var(--secondary-color); margin: 20px 0;">
