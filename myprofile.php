@@ -132,7 +132,7 @@
         <div style="color: #ff5555;">● ● ● <span style="color:#00ff41; margin-left:10px;">root@pongsapak_sec:~</span></div>
         <div>STATUS: <span class="status-online">CONNECTED</span></div>
     </div>
-    
+
     <div class="profile-card">
         <div class="profile-img">💀</div>
         <h1>NAME: นายพงศ์ภัค ปัถวี</h1>
@@ -156,17 +156,30 @@
         </div>
     </div>
 
+<div class="guestbook-section">
     <div class="guestbook-section">
         <h2>💬 INCOMING_MESSAGES (ข้อความจากเครือข่ายเพื่อนร่วมทีม)</h2>
-        
+
         <p style="color: #ffb86c; font-size: 13px; font-weight: bold;">
             [ WARNING: สมาชิกในทีมอีก 2 คน ต้องทำการแก้ไขไฟล์ messages.php เพื่อแทรกข้อความของตนเองเข้าสู่ระบบ ]
         </p>
-        
+
         <hr style="border: 0; border-top: 1px dashed var(--secondary-color); margin: 20px 0;">
-        
+
         <div class="messages-container">
             <?php include('messages.php'); ?>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+            <?php if (file_exists('messages.php')): ?>
+                <?php include('messages.php'); ?>
+            <?php else: ?>
+                <p style="color: #555;">[ SYSTEM ] ยังตรวจไม่พบฐานข้อมูลข้อความจากผู้ใช้งานภายนอก...</p>
+            <?php endif; ?>
         </div>
     </div>
 </div>
