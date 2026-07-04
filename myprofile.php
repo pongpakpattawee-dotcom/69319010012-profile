@@ -154,7 +154,7 @@
         </div>
     </div>
 
-<div class="guestbook-section">
+    <div class="guestbook-section">
         <h2>💬 INCOMING_MESSAGES (ข้อความจากเครือข่ายเพื่อนร่วมทีม)</h2>
         
         <p style="color: #ffb86c; font-size: 13px; font-weight: bold;">
@@ -165,18 +165,6 @@
         
         <div class="messages-container">
             <?php include('messages.php'); ?>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
-
-            <?php if (file_exists('messages.php')): ?>
-                <?php include('messages.php'); ?>
-            <?php else: ?>
-                <p style="color: #555;">[ SYSTEM ] ยังตรวจไม่พบฐานข้อมูลข้อความจากผู้ใช้งานภายนอก...</p>
-            <?php endif; ?>
         </div>
     </div>
 </div>
