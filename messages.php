@@ -1,13 +1,11 @@
 <?php
-echo '<div class="message-box">
-        <strong>[netiwit]:</strong> Hello Pongpak im netiwit
-        <br>
-        <span style="font-size: 12px; color: #666;">-> STATUS: netiwit69319010010</span>
-      </div>';
+// ไฟล์นี้เกิดจากการแก้ไขและเคลียร์ Merge Conflict ร่วมกันของทีม
 
-echo '<div class="message-box">
-        <strong>[Praveen]:</strong> Hello Pongpak im Praveen
-        <br>
-        <span style="font-size: 12px; color: #666;">-> STATUS: Praveen69319010009</span>
-      </div>';
+echo '<div class="message-box">';
+echo '<strong>จาก ประวีณ:</strong> สวัสดีครับ ระบบเทสการทำงานและอัปเดตหัวข้อเรียบร้อยแล้วครับ!';
+echo '</div>';
+
+echo '<div class="message-box">';
+echo '<strong>จาก เนติวิทย์:</strong> ระบบส่งข้อความจากเนติวิทย์ใช้งานได้ปกติ มาร่วมทดสอบระบบ Git ครับ';
+echo '</div>';
 ?>
