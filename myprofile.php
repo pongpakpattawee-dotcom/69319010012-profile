@@ -156,18 +156,46 @@
 
     <div class="guestbook-section">
         <h2>💬 INCOMING_MESSAGES (ข้อความจากเครือข่ายเพื่อนร่วมทีม)</h2>
-        <p style="color: #ffb86c; font-size: 13px; font-weight: bold;">
-            [ WARNING: สมาชิกในทีมอีก 2 คน ต้องทำการแก้ไขไฟล์ messages.php เพื่อแทรกข้อความของตนเองเข้าสู่ระบบ ]
-        </p>
+        
+        <?php 
+        // เช็กสถานะของไฟล์และจัดการการแสดงผลข้อความแจ้งเตือนด้วย PHP
+        $show_warning = true;
+        $file_exists = file_exists('messages.php');
+
+        if ($file_exists) {
+            // อ่านโค้ดด้านในไฟล์มาเช็กความว่างเปล่า
+            $messages_content = trim(file_get_contents('messages.php'));
+            // ตัดคำสั่ง PHP และพื้นที่ว่างออกเพื่อตรวจหาเนื้อหาจริงที่เพื่อนพิมพ์
+            $pure_content = trim(str_replace(['<?php', '?>', 'echo', ';'], '', $messages_content));
+            
+            if (!empty($pure_content)) {
+                $show_warning = false; // ถ้าเพื่อนกรอกข้อความมาแล้ว ไม่ต้องโชว์คำเตือนสีเหลือง
+            }
+        }
+
+        // แสดงคำเตือนเฉพาะเมื่อเพื่อนยังไม่พิมพ์ข้อความเข้ามาในระบบเท่านั้น
+        if ($show_warning && $file_exists): 
+        ?>
+            <p style="color: #ffb86c; font-size: 13px; font-weight: bold;">
+                [ WARNING: สมาชิกในทีมอีก 2 คน ต้องทำการแก้ไขไฟล์ messages.php เพื่อแทรกข้อความของตนเองเข้าสู่ระบบ ]
+            </p>
+        <?php endif; ?>
+
         <hr style="border: 0; border-top: 1px dashed var(--secondary-color); margin: 20px 0;">
         
-	<div class="messages-container">
-	<?php if (file_exists('messages.php')): ?>
-    	<?php include('messages.php'); ?>
-	<?php else: ?>
-    	<p style="color: #555;">[ SYSTEM ] ยังตรวจไม่พบฐานข้อมูลข้อความจากผู้ใช้งานภายนอก...</p>
-	<?php endif; ?>
-	</div>
+        <div class="messages-container">
+        <?php 
+        if ($file_exists) {
+            if (!$show_warning) {
+                // ดึงไฟล์ข้อความที่แก้ไขเสร็จสมบูรณ์แล้วมาทำงาน
+                include('messages.php'); 
+            } else {
+                echo '<p style="color: #888; font-size: 13px;">[ WAITING ] กำลังรอการเชื่อมต่อและส่งข้อมูล Commit จากสมาชิกทีม...</p>';
+            }
+        } else {
+            echo '<p style="color: #555;">[ SYSTEM ] ยังตรวจไม่พบฐานข้อมูลข้อความจากผู้ใช้งานภายนอก...</p>';
+        }
+        ?>
         </div>
     </div>
 </div>
